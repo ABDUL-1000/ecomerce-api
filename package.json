@@ -3,17 +3,17 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-
   "scripts": {
-  "start": "node app.js",
-  "dev": "nodemon app.js",
-   "test": "echo \"Error: no tests yet\" && exit 0"
-},
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no tests yet\" && exit 0"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "@paralleldrive/cuid2": "github:paralleldrive/cuid2",
     "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
     "dotenv": "^17.2.0",
