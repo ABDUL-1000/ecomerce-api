@@ -1,12 +1,9 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
-const { createId } = require ("@paralleldrive/cuid2");
+
 
 const userSchema = new mongoose.Schema({
-  _id: {
-      type: String,
-      default: () => createId(),
-    },
+ 
   fullName: {
     type: String,
     required: true,
