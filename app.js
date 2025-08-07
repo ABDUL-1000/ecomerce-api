@@ -2,6 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const cors = require('cors');
 const connectDB = require('./config/db');
+const brandRoutes = require('./routes/brandRoutes');
 
 // Load env vars
 dotenv.config();
@@ -24,6 +25,7 @@ app.use(cors());
 // Mount routers
 app.use('/auth', authRoutes);
 app.use('/products', productRoutes);
+app.use('/brands', brandRoutes);
 
 const PORT = process.env.PORT || 5000;
 

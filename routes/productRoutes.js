@@ -1,6 +1,6 @@
 const express = require('express');
 const { protect, admin } = require('../middlewares/authMiddleware');
-const { getProducts, createProduct, deleteProduct, updateProduct } = require('../controllers/productController');
+const { getProducts, createProduct, deleteProduct, updateProduct, getProductsByBrand } = require('../controllers/productController');
 
 const router = express.Router();
 
@@ -11,5 +11,8 @@ router.route('/')
 router.route('/:id')
   .delete(protect, admin, deleteProduct) 
   .put(protect, admin, updateProduct);  
+
+router.route('/:brand/:page/:limit')
+  .get(getProductsByBrand);
 
 module.exports = router;
